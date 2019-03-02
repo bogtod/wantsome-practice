@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Forms Homework</title>
+    </head>
+
+    <body>
+        <head>
+            <h1>HTML Forms Homework</h1>
+        </head>
+
+        <nav>
+            <ul style="list-style-type:none;">
+                <li><a href="../index.html" style="color:chocolate;">Home</a></li>
+                <li><a href="ex1.html">Exercise 1</a></li>
+                <li>Exercise 2</li>
+                <li><a href="ex3.html">Exercise 3</a></li>
+                <li><a href="ex4.html">Exercise 4</a></li>
+            </ul>
+        </nav>
+
+        <hr>
+
+        <main>
+            <h4>Travel Reservation Form</h4>
+            <p>* denotes mandatory</p>
+
+            <br><br>
+
+            <label for="full-name">Full name*:</label>
+            <br>
+            <input type="text" name="full-name" required placeholder="FirstName LastName" />
+            <br>
+
+            
+            <label for="email">Email Address*:</label>
+            <br>
+            <input type="email" name="email" required placeholder="EMAIL_ADDRESS" />
+            <br>
+
+            <label for="package">Select Tour Package*:</label>
+            <br>
+            <select name="package" required>
+                <option value="goa">Goa</option>
+                <option value="boa">Boa</option>
+            </select>
+            <br>
+
+            <label for="date">Arrival Date*:</label>
+            <br>
+            <input type="date" name="date" required />
+            <br>
+
+            <label for="persons">Number of Persons*:</label>
+            <br>
+            <input type="number" name="persons" required placeholder="UNKNOWN_TYPE" />
+            <br>
+
+            <label for="blahblah">What would you like to avail?*</label>
+            <br>
+            Boarding<input type="checkbox" name="blahblah" value="boarding" />
+            <br>
+            Fooding<input type="checkbox" name="blahblah" value="fooding" />
+            <br>
+            Sight seeing<input type="checkbox" name="blahblah" value="sight-seeing" />
+            <br>
+
+            <label for="discount-coupon">Discount Coupon code:</label>
+            <br>
+            <input type="number" name="discount-coupon" placeholder="UNKNOWN_TYPE" />
+            <br>
+
+            <label for="terms">Terms and conditions*</label>
+            <br>
+            <input type="radio" name="terms" value="yes">I Agree</input>
+            <input type="radio" name="terms" value="no">I disagree</input>
+            <br>
+            <button type="submit">Complete Reservation</button>
+        </main>
+
+        <br><hr><br>
+
+        <footer>
+            <p>This is a footer</p>
+            <p>The code in this page can also be found <a href="https://github.com/bogtod/wantsome-practice.git/">on GitHub</a></p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Forms Homework</title>
+    </head>
+
+    <body>
+        <head>
+            <h1>HTML Forms Homework</h1>
+        </head>
+
+        <nav>
+            <ul style="list-style-type:none;">
+                <li><a href="../index.html" style="color:chocolate;">Home</a></li>
+                <li><a href="ex1.html">Exercise 1</a></li>
+                <li><a href="ex2.html">Exercise 2</a></li>
+                <li><a href="ex3.html">Exercise 3</a></li>
+                <li>Exercise 4</li>
+            </ul>
+        </nav>
+
+        <hr>
+
+        <main>
+            <h4>My feedback form</h4>
+
+            <form>
+                <ul>
+                    <li>
+                        <label for="name">Name:</label>
+                        <input type="name" name="name" />
+                    </li>
+                    <li>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" />
+                    </li>
+                    <li>
+                        <label for="pass">Password:</label>
+                        <input type="password" name="pass" />
+                    </li>
+
+                    <li>
+                        <label for="emotions">Please check all the emotions that apply to you:</label>
+                        <br>
+                        <ul>
+                            <li>
+                                Angry
+                                <input type="checkbox" name="emotions" checked />
+                            </li>
+                            <li>
+                                Sad
+                                <input type="checkbox" name="emotions" />
+                            </li>
+                            <li>
+                                Happy
+                                <input type="checkbox" name="emotions" />
+                            </li>
+                            <li>
+                                Ambivalent
+                                <input type="checkbox" name="emotions" />
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <label for="satisfaction">How satisfied were you with our service?</label>
+                        <ul>
+                            <li>
+                                Very satisfied
+                                <input type="radio" name="satisfaction" checked />
+                            </li>
+                            <li>
+                                Satisfied
+                                <input type="radio" name="satisfaction" />
+                            </li>
+                            <li>
+                                Didn't care
+                                <input type="radio" name="satisfaction" />
+                            </li>
+                            <li>
+                                Dissatisfied
+                                <input type="radio" name="satisfaction" />
+                            </li>
+                            <li>
+                                Very dissatisfied
+                                <input type="radio" name="satisfaction" />
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <label for="comments">Further comments:</label>
+                        <textarea name="comments"></textarea>
+                    </li>
+
+                    <li>
+                        <label for="photo">Bio photo:</label>
+                        <input type="file" name="photo" />
+                    </li>
+
+                    <li>
+                        <label for="location">Location visited:</label>
+                        <select name="location">
+                            <option>Select location</option>
+                            <option value="belgium">Belgium</option>
+                            <option value="romania">Romania</option>
+                        </select>
+                    </li>
+                </ul>
+
+                <button type="submit">submit</button>
+            </form>
+        </main>
+
+        <br><hr><br>
+
+        <footer>
+            <p>This is a footer</p>
+            <p>The code in this page can also be found <a href="https://github.com/bogtod/wantsome-practice.git/">on GitHub</a></p>
+        </footer>
+    </body>
+</html>

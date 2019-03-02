@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Forms Homework</title>
+    </head>
+
+    <body>
+        <head>
+            <h1>HTML Forms Homework</h1>
+        </head>
+
+        <nav>
+            <ul style="list-style-type:none;">
+                <li><a href="../index.html" style="color:chocolate;">Home</a></li>
+                <li><a href="ex1.html">Exercise 1</a></li>
+                <li><a href="ex2.html">Exercise 2</a></li>
+                <li>Exercise 3</li>
+                <li><a href="ex4.html">Exercise 4</a></li>
+            </ul>
+        </nav>
+
+        <hr>
+
+        <main>
+            <form>
+                <label for="search">Search for:</label>
+                <br>
+                <input type="search" name="search" placeholder="chocolate cheesecake recipes" />
+                <button type="submit">Search</button>
+                <br>
+
+                <table>
+                    <tr>
+                        <td>
+                            <label for="match" >Match:</label>
+                        </td>
+                        <td>
+                                <input type="radio" name="match" value="any" />Any word
+                                <input type="radio" name="match" value="all" checked />All words
+                                <input type="radio" name="match" value="exact" />Exact phrase
+                                <br>
+                                <input type="checkbox" name="match" value="alike" checked />Sound-alike matching
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="date" >Dated:</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="date" />
+                            <select>
+                                <option>Within the last year</option>
+                                <option>Within the last month</option>
+                                <option>From the beginning of time</option>
+                            </select>
+
+                            <br>
+
+                            <input type="radio" name="date" checked />
+                            
+                            
+                            From:
+                            <select>
+                                <option>September</option>
+                                <option>October</option>
+                                <option>November</option>
+                            </select>
+                            <select>
+                                <option>8</option>
+                                <option>1</option>
+                                <option>15</option>
+                            </select>
+                            ,
+                            <input type="number" value="2009" maxlength="4" />
+
+                            <br>
+
+                            To:
+                            <select>
+                                <option>October</option>
+                                <option>November</option>
+                                <option>December</option>
+                            </select>
+                            <select>
+                                <option>18</option>
+                                <option>1</option>
+                                <option>15</option>
+                            </select>
+                            ,
+                            <input type="number" value="2011" maxlength="4" />
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="within" >Within:</label>
+                        </td>
+
+                        <td>
+                            <select name="within">
+                                <option>Description</option>
+                                <option>Summary</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="show">Show:</label>
+                        </td>
+
+                        <td>
+                            <select>
+                                <option>10</option>
+                                <option>5</option>
+                            </select>
+                            results
+                            <select>
+                                <option>with</option>
+                                <option>without</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="sorting">Sort by:</label>
+                        </td>
+
+                        <td>
+                            <select>
+                                <option>relevance</option>
+                                <option>ascending</option>
+                                <option>descending</option>
+                            </select>
+                        </td>
+                    </tr>
+
+
+
+                </table>
+                
+            </form>
+        </main>
+
+        <br><hr><br>
+
+        <footer>
+            <p>This is a footer</p>
+            <p>The code in this page can also be found <a href="https://github.com/bogtod/wantsome-practice.git/">on GitHub</a></p>
+        </footer>
+    </body>
+</html>
