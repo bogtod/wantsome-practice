@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checkout</title>
+    </head>
+
+    <body>
+        <h3>Finalizare Comandă</h3>
+
+        <form>
+            <label for="surname">Prenume*</label>
+            <input type="text" name="surname" id="surname" required />
+        
+            <br><br>
+        
+            <label for="name">Nume*</label>
+            <input type="text" name="name" required />
+            
+            <br><br>
+        
+            <label for="cnp">CNP*</label>
+            <input type="number" name="cnp" maxlength="13" required />
+            
+            <br><br>
+        
+            <label for="sex">Sex</label>
+            <select name="sex">
+                <option value="female">Femeie</option>
+                <option value="male">Bărbat</option>
+            </select>
+            
+            <br><br>
+        
+            <label for="birthdate">Data nașterii</label>
+            <input type="date" name="birthdate" />
+            
+            <br><br>
+        
+            <label for="phone">Număr de Telefon</label>
+            <input type="tel" name="phone" />
+
+            <br><br>
+
+            <label for="card-option">Plătiți cu cardul?</label>
+            <input type="radio" name="card-options" value="1">Da</input>
+            <input type="radio" name="card-options" value="0">Nu</input>
+            
+            <br><br>
+        
+            <label for="card-number">Număr card</label>
+            <input type="number" name="card-number" />
+            
+            <br><br>
+        
+            <label for="address">Adresă</label>
+            <input type="text" name="address" />
+            
+            <br><br>
+        
+            <label for="country">Țară</label>
+            <select name="country">
+                <option>România</option>
+                <option>Spania</option>
+                <option>China</option>
+            </select>
+            
+            <br><br>
+        
+            <label for="city">Oraș</label>
+            <select name="country">
+                <option>București</option>
+                <option>Madrid</option>
+                <option>Beijing</option>
+            </select>
+            
+            <br><br>
+
+            <label for="observations">Observații</label>
+            <br>
+            <textarea name="observations" maxlength="150"></textarea>
+
+            <br><br>
+
+            <button type="submit" onclick="clickBtn()">Trimite Datele</button>
+
+        </form>
+        
+
+
+    </body>
+
+    <script>
+        var x = document.getElementById("surname");
+        function clickBtn() {
+            alert("Thank you, " + x.value);
+            location.reload();
+        }
+    </script>
+</html>
