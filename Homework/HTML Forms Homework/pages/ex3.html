@@ -50,9 +50,9 @@
                         <td>
                             <input type="radio" name="date" />
                             <select>
-                                <option>Within the last year</option>
-                                <option>Within the last month</option>
-                                <option>From the beginning of time</option>
+                                <option value="last-year">Within the last year</option>
+                                <option value="last-month">Within the last month</option>
+                                <option value="time">From the beginning of time</option>
                             </select>
 
                             <br>
@@ -62,14 +62,14 @@
                             
                             From:
                             <select>
-                                <option>September</option>
-                                <option>October</option>
-                                <option>November</option>
+                                <option value="september">September</option>
+                                <option value="october">October</option>
+                                <option value="november">November</option>
                             </select>
                             <select>
-                                <option>8</option>
-                                <option>1</option>
-                                <option>15</option>
+                                <option value="8">8</option>
+                                <option value="1">1</option>
+                                <option value="15">15</option>
                             </select>
                             ,
                             <input type="number" value="2009" maxlength="4" />
@@ -78,14 +78,14 @@
 
                             To:
                             <select>
-                                <option>October</option>
-                                <option>November</option>
-                                <option>December</option>
+                                <option value="october">October</option>
+                                <option value="november">November</option>
+                                <option value="december">December</option>
                             </select>
                             <select>
-                                <option>18</option>
-                                <option>1</option>
-                                <option>15</option>
+                                <option value="18">18</option>
+                                <option value="1">1</option>
+                                <option value="15">15</option>
                             </select>
                             ,
                             <input type="number" value="2011" maxlength="4" />
@@ -100,8 +100,8 @@
 
                         <td>
                             <select name="within">
-                                <option>Description</option>
-                                <option>Summary</option>
+                                <option name="within" value="description">Description</option>
+                                <option name="within" value="summary">Summary</option>
                             </select>
                         </td>
                     </tr>
@@ -113,13 +113,13 @@
 
                         <td>
                             <select>
-                                <option>10</option>
-                                <option>5</option>
+                                <option value="10">10</option>
+                                <option value="5">5</option>
                             </select>
                             results
                             <select>
-                                <option>with</option>
-                                <option>without</option>
+                                <option value="with">with</option>
+                                <option value="without">without</option>
                             </select>
                         </td>
                     </tr>
@@ -131,9 +131,9 @@
 
                         <td>
                             <select>
-                                <option>relevance</option>
-                                <option>ascending</option>
-                                <option>descending</option>
+                                <option value="relevance">relevance</option>
+                                <option value="ascending">ascending</option>
+                                <option value="descending">descending</option>
                             </select>
                         </td>
                     </tr>
