@@ -1,0 +1,30 @@
+#secondDiv {
+    color: #ff0000;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+a[href*="wantsome"] {
+    color: #0000ff;
+}
+
+a[href*="google"] {
+    color: #ffff00;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+.firstDiv > *:first-child {
+    color: #8a2be2;
+}
+
+#secondDiv > *:last-child {
+    color: #a52a2a;
+}
+
+.thirdDiv > *:nth-child(3) {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #0000CC;
+    text-decoration: underline;
+}
