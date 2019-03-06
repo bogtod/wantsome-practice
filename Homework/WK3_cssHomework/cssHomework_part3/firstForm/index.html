@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Forms Homework</title>
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Laila" rel="stylesheet">
+    </head>
+
+    <body>
+        
+        <main>
+            <h4>First  Exercise Form</h4>
+            <form>
+                <label for="name">Nume*: </label>
+                <br>    
+                <input type="text" name="name" required />
+
+                <br><Br>
+                
+                <label for="surname">Prenume*: </label>
+                <br>
+                <input type="text" name="surname" required />
+    
+                <br><Br>
+    
+                <label for="sex">Sex: </label>
+                <br>
+                <input type="radio" name="sex" value="female" checked>Femeie</input>
+                <input type="radio" name="sex" value="male">Bărbat</input>
+
+                <br><br>
+
+                <label for="age">Vârstă: </label>
+                <br>
+                <input type="number" name="age" min="18" max="85" />
+
+                <br><br>
+
+                <label for="country">Țară: </label>
+                <br>
+                <select name="country">
+                    <option name="country" value="romania">România</option>
+                    <option name="country" value="china">China</option>
+                    <option name="country" value="spain">Spania</option>
+                </select>
+
+                <br><br>
+
+                <label for="city">Oraș: </label>
+                <br>
+                <input type="text" name="city" />
+
+                <br><br>
+
+                <label for="address">Adresă: </label>
+                <br>
+                <input type="text" name="address" />
+
+                <br><br>
+
+                <label for="postal-code">Cod Poștal: </label>
+                <br>
+                <input type="number" name="postal-code" maxlength="12" />
+
+                <br><br>
+
+                <label for="email">Adresă de Email: </label>
+                <br>
+                <input type="email" name="email" />
+
+                <br><br>
+
+                <label for="message">Mesaj: </label><br>
+                <textarea name="message"></textarea>
+
+                <br><br>
+
+                <label for="add-cv">Atașează CV: </label>
+                <br>
+                <input type="file" name="add-cv" />
+
+                <br><br>
+
+                <button type="submit">Trimite</button>
+                
+                <button type="reset">Resetează</button>
+            </form>
+        </main>
+
+        <br><hr><br>
+
+        <footer>
+            <p>This is a footer</p>
+            <p>The code in this page can also be found <a href="https://github.com/bogtod/wantsome-practice.git/">on GitHub</a></p>
+        </footer>
+    </body>
+</html>

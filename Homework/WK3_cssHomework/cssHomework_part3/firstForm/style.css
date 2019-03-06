@@ -1,0 +1,80 @@
+main {
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 10px 5px;
+    width: 50%;
+    margin: 0 auto;
+    font-family: 'Laila', serif;
+}
+
+h4 {
+    text-align: center;
+}
+
+form {
+    background-color: white;
+    width: 50%;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+input:focus {
+    box-shadow: 0 0 5px #51cbee;
+    border: 1px solid #51cbee;
+    background-color: wheat;
+    width: 100%;
+    margin: 0 auto;
+}
+
+input[type="radio"]:focus {
+    width: 15px;
+}
+
+input[type="radio"]:checked:before {
+    width: 50px;
+    content: "✓";
+    color: red;
+}
+
+/* if the focused input is required, places an asterisc image */
+input:focus:required {
+    background-image: url("https://cdn3.iconfinder.com/data/icons/web-interface-6/10/star-red-512.png");
+    background-size: 10px 10px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    width: calc(100% - 20px);
+}
+
+button[type="submit"] {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    font-family: 'Laila', serif;
+    border-radius: 5px;
+    border: 2px solid green;
+    background-color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+button[type="reset"] {
+    background-color: white;
+    border: 2px solid red;
+}
+
+button[type="reset"]:hover {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+button[type="reset"]:hover::after {
+    content: "!!!";
+    color: white;
+}
