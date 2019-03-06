@@ -1,0 +1,72 @@
+/* Fiecare element par listei trebuie sa aiba textul verde
+    Puteam folosi si doar li:nth-child(even), pentru ca sunt singurele li-uri din pagina */
+ul > li:nth-child(even) {
+    color: green;
+}
+
+
+/* Al 3-lea element al listei trebuie sa aiba background-ul albastru deschis */
+ul > li:nth-child(3) {
+    background-color: blue;
+}
+
+/* Primul element al listei trebuie sa aiba bordura sus de tip solid de 1px si sa fie verde */
+ul > li:first-child {
+    border-top: 1px solid green; 
+}
+
+/* Ultimul element al listei trebuie sa aiba bordura jos de tip punctata de 5px si sa fie albastra */
+ul > li:last-child {
+    border-bottom: 1px dotted blue;
+}
+
+/* Link-urile pentru elementele de pe pozitiile 3 si 5 trebuie sa fie rosii */
+ul > li:nth-child(3) a, ul > li:nth-child(5) a {
+    color: red;
+}
+
+/* Link-ul pentru elementul de pe pozitia 5 trebuie sa se faca gri atunci cand ducem mouse-ul
+deasupra lui */
+ul > li:nth-child(5) a:hover {
+    color: grey;
+}
+
+/* Elementele de pe pozitiile 2 si 5 trebuie sa ramana fara “bullet point” */
+ul > li:nth-child(2), ul > li:nth-child(5) {
+    list-style-type: none;
+}
+
+/* Input-urile de tip text trebuie sa aiba fundal gri atunci cand sunt focusate */
+input[type="text"]:focus {
+    background-color: grey;
+}
+
+/* Input-ul corespunzator “First Name” trebuie sa aiba textul de culoarea verde atunci cand scriem in
+el */
+form > div:first-child input {
+    color: green;
+}
+
+/* Input-ul corespunzator “Last Name” trebuie sa aiba textul de culoarea albastra atunci cand scriem
+in el */
+form > div:nth-child(2) input {
+    color: blue;
+}
+
+/* Input-ul pentru parola trebuie sa aiba textul invizibil atunci cand scriem in el */
+input[type="password"] {
+    color: transparent;
+}
+
+/* Atunci cand selectam textul unui e-mail scris deja in input-ul pentru e-mail, selectia trebuie sa
+ aiba fundalul galben iar culoarea textului sa fie roz */
+ input[type="email"]::selection {
+     background-color: yellow;
+     color: pink;
+ }
+
+ /* Butonul de trimitere a formularului trebuie sa aiba textul rosu atunci cand trecem cu mouse-ul
+ peste el */
+ input[type="submit"]:hover {
+     color: red;
+ }
