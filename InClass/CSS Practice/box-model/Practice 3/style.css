@@ -1,0 +1,41 @@
+html {
+    background-color: gray;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+}
+
+.mainDiv {
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+
+.boxOne {
+    background-color: yellow;
+    position: absolute;
+}
+
+
+.boxTwo {
+    background-color: blue;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+
+.boxThree {
+    background-color: green;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
