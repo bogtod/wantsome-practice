@@ -23,12 +23,14 @@ nav {
     display: inline-block;
     width: 200px;
     border-color: #fc869a;
+    padding: 30px;
 }
 
 main {
     display: inline;
     position: absolute;
-    left: 200px;
+    left: 203px;
+    right: 3px;
 }
 
 main > section:nth-child(2) {
@@ -43,8 +45,9 @@ section {
 footer {
     display: block;
     position: absolute;
-    bottom: 0;
-    width: 100%;
+    bottom: 3px;
+    width: calc(100% - 6px);
+    height: 150px;
     text-align: center;
     border-color: #1b921b;
 }
