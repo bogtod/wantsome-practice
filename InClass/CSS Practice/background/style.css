@@ -1,0 +1,11 @@
+div {
+    width: 635px;
+    height: 406px;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-image: url('https://www.natgeokids.com/wp-content/uploads/2017/02/giraffe-facts-1.jpg');
+    background-clip: content-box;
+    border: 5px dotted red;
+    margin: 0 auto;
+}
