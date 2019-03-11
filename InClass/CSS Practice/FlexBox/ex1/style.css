@@ -1,0 +1,35 @@
+body {
+    color: white;
+}
+
+
+
+#header {
+    height: 50px;
+    background-color: purple;
+}
+
+main {
+    height: 150px;
+    display: flex;
+}
+
+#left-sidebar {
+    flex-grow: 1;
+    background-color: lightblue;
+}
+
+#main-content {
+    flex-grow: 2;
+    color: black;
+}
+
+#right-sidebar {
+    flex-grow: 1;
+    background-color: lightgreen;
+}
+
+#footer {
+    height: 50px;
+    background-color: brown;
+}
