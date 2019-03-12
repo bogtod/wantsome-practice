@@ -1,0 +1,31 @@
+body {
+    background-color: #00ffff;
+}
+
+header, footer {
+    height: 70px;
+    background-color: rgb(171, 254, 45);
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(170, 254, 45, 0.7);
+}
+
+section {
+    width: 250px;
+    height: 250px;
+}
+
+main > section:first-child {
+    background-image: url('https://cacm.acm.org/system/assets/0002/4065/062016_CACMpg79_Why-Google.large.jpg');
+}
+
+main > section:nth-child(2) {
+    background-image: url('https://www.sololearn.com/Icons/Courses/1023.png');
+}
+
+main > section:last-child {
+    background-image: url('https://sophosnews.files.wordpress.com/2014/11/html5-250.png?w=250');
+}
