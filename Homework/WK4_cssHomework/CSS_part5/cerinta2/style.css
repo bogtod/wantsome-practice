@@ -1,0 +1,43 @@
+main {
+    display: grid;
+    grid-gap: 10px;
+    color: white;
+    width: 70%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 10px;
+}
+
+#vertical {
+    background-color: #90ee90;
+    grid-column: 1/6;
+    grid-row: 1/4;
+}
+
+#middleTile {
+    background-color: #0000ff;
+    grid-column: 6/9;
+    grid-row: 1/7;
+}
+
+#tallTile {
+    background-color: #008000;
+    grid-column: 9/12;
+    grid-row: 1/12;
+}
+
+#tiles {
+    background-color: #ffff00;
+    color: #000000;
+    grid-column: 1/6;
+    grid-row: 4/7;
+}
+
+#wideTile {
+    background-color: #ff004c;
+    grid-column: 1/9;
+    grid-row: 7/12;
+}
+
