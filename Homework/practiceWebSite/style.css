@@ -1,0 +1,129 @@
+html {
+    font-size: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Serif', serif;
+    text-decoration: none;
+}
+
+/* h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans', sans-serif;
+} */
+
+.section {
+    width: 100%;
+    padding: 2em 0;
+}
+
+.sectionContent {
+    margin: 2em auto;
+    width: 80%;
+    min-width: 360px;
+}
+
+.sectionBody {
+    display: flex;
+    justify-content: space-between;
+    margin: 3em 0;
+}
+
+button {
+    height: 2em;
+    width: 5em;
+    border: none;
+    background-color: #4169E1;
+    color: #ffffff;
+    font-weight: strong;
+}
+
+/* Header and nav styling */
+header {
+    background: url('images/banner.jpg') no-repeat;
+    background-position: left top;
+    background-size: cover;
+    color: white;
+    font-weight: lighter;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em;
+}
+
+.navList {
+    list-style: none;
+    align-self: flex-end;
+}
+
+.navList > li {
+    display: inline;
+    margin: 0 1em;
+}
+
+.navList > li > a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.pageTitle {
+    margin: 3em 0 4em 0;
+    text-align: center;
+}
+
+.pageTitle > h1 {
+    font-size: 4em;
+}
+
+
+
+/* #card section styling */
+.card {
+    padding: 0 2em;
+}
+
+.card > p {
+    padding: 2em 0;
+}
+
+#middleCard {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+
+
+/* #people section styling */
+#people {
+    background-color: #4169E1;
+    color: white;
+}
+
+#people > * {
+    display: block;
+    text-align: center;
+}
+
+.peopleCard {
+    border: 1px solid white;
+    color: white;
+    padding: 2em;
+}
+
+.peopleCard:hover {
+    background-color: white;
+    color: #4169E1;
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.peopleCard > img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
