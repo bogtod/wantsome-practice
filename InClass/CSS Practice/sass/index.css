@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #32cd32;
+}
+
+nav {
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 5px;
+  padding: 2px 5px;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+}
+
+button {
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 5px;
+  border-color: lightgreen;
+  color: #000000;
+}
+
+button:hover {
+  background-color: blue;
+  color: white;
+}
+
+main button {
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 5px;
+  border-color: lightgreen;
+  color: #000000;
+}
+
+main button:hover {
+  background-color: blue;
+  color: white;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+nav, footer {
+  background-color: aliceblue;
+  color: black;
+  padding: 10px;
+}
+
+main > p, main > p:last-child {
+  padding: 10px;
+  background-color: #32cd32;
+  border: 2px solid black;
+  margin: 1em 0;
+}
+
+main > p:last-child {
+  text-align: center;
+}
+/*# sourceMappingURL=index.css.map */

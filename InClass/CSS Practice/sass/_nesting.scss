@@ -1,0 +1,24 @@
+
+
+nav {
+
+    background-color: $secondary-color;
+    border-radius: 5px;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline-block;
+        margin: 5px;
+        padding: 2px 5px;
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+    }
+}

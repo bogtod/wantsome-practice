@@ -1,0 +1,38 @@
+@mixin mainButton {
+
+    button {
+    background-color: $secondary-color;
+    border-radius: 5px;
+    padding: 5px;
+    border-color: lightgreen;
+    color: #000000;
+
+        &:hover {
+            background-color: blue;
+            color: white;
+        }
+    }
+}
+
+
+@mixin headAndFoot($background, $text, $padding) {
+    background-color: $background;
+    color: $text;
+    padding: $padding;
+}
+
+
+@include mainButton();
+    main {
+        @include mainButton;
+    }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+nav, footer {
+    @include headAndFoot($secondary-color, black, 10px)
+}
