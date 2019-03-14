@@ -1,0 +1,21 @@
+
+  
+  @keyframes myAnimation {
+    25% {background-color: yellow};
+    50% {background-color: green};
+    75% {background-color: black;}
+  }
+
+
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    
+  }
+
+div:hover {
+    animation-name: myAnimation;
+    animation-duration: 3s;
+}
+
