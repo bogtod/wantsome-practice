@@ -6,13 +6,18 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Serif', serif;
+    font-family: 'Noto Serif KR', serif;
     text-decoration: none;
 }
 
-/* h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Noto Sans', sans-serif;
-} */
+    font-stretch: extra-expanded;
+}
+
+#cards > *, #articles > *, #socialMedia > * {
+    color: #708090;
+}
 
 .section {
     width: 100%;
@@ -32,12 +37,39 @@ html {
 }
 
 button {
+    position: relative;
     height: 2em;
-    width: 5em;
+    padding: 0 1em;
     border: none;
     background-color: #4169E1;
-    color: #ffffff;
-    font-weight: strong;
+    color: white;
+    cursor: pointer;
+    line-height: 1em;
+}
+
+
+/* "More" buttons styling on hover */
+button:hover {
+    padding-right: 40px;
+    border-radius: 0 50% 50% 0;
+    transition: all 0.25s;
+}
+
+button:after {
+    position: absolute;
+    left: -25%;
+    width: 50%;
+    opacity: 0;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: " \f101";
+    color: #ff9100;
+    transition: all 0.5s;
+}
+
+button:hover::after {
+    left: 50%;
+    opacity: 1.0;
 }
 
 /* Header and nav styling */
@@ -66,19 +98,46 @@ nav {
 }
 
 .navList > li > a {
+    position: relative;
     text-decoration: none;
     color: #ffffff;
+    padding: 0.5em;
+    text-align: center;
 }
 
+
+/* Animating the main navigation links */
+@keyframes borderAnimation {
+    0%{left: -100%; opacity: 0;};
+    100%{left: 0; opacity: 1.0;};
+}
+
+.borderSlide {
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-bottom: 3px solid #4169E1;
+}
+
+li > a:hover .borderSlide {
+    animation-name: borderAnimation;
+    animation-duration: 0.25s;
+    visibility: visible;
+}
+
+
+/* styling the jumbotron */
 .pageTitle {
     margin: 3em 0 4em 0;
     text-align: center;
 }
 
-.pageTitle > h1 {
+.pageTitle > span {
     font-size: 4em;
 }
-
 
 
 /* #card section styling */
@@ -91,10 +150,9 @@ nav {
 }
 
 #middleCard {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-left: 1px solid #708090;
+    border-right: 1px solid #708090;
 }
-
 
 
 /* #people section styling */
@@ -111,14 +169,30 @@ nav {
 .peopleCard {
     border: 1px solid white;
     color: white;
+    width: 160px;
     padding: 2em;
+    margin: 0 5px;
 }
 
 .peopleCard:hover {
     background-color: white;
     color: #4169E1;
+    /* matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()) */
     transform: scale(1.1);
-    transition: all 0.3s;
+    border: 1px solid #ff9100;
+    -webkit-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
+    background-color: #d9e2ff;
+    transition: all 0.25s;
+}
+
+.peopleCard:hover img {
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
+    transition: all 0.25s;
 }
 
 .peopleCard > img {
@@ -127,3 +201,104 @@ nav {
     border-radius: 50%;
 }
 
+
+/* articles section styling */
+#articles > .sectionContent > h2, small {
+    display: block;
+    text-align: center;
+}
+
+#articles .sectionContent {
+    justify-content: space-between;
+}
+
+#articles article {
+    width: 48%;
+    padding: 0 2em;
+}
+
+#articles h3, button {
+    margin: 1em 0;
+}
+
+#articles article img {
+    width: 100%;
+}
+
+
+/* footer styling */
+footer {
+    padding: 0;
+}
+
+footer .sectionContent {
+    margin: 0 auto;
+    border-top: 1px solid #708090;
+}
+
+footer .sectionBody {
+    margin: 0;
+    padding: 2em 0;
+}
+
+#icons > a {
+    margin-right: 1em;
+    color: #708090;
+}
+
+#icons > a:last-child {
+    margin: 0;
+}
+
+#icons > a:hover i {
+    color: #4169E1;
+}
+
+
+
+
+@media only screen and (max-width: 790px) {
+    .sectionContent {
+        width: 100%;
+    }
+
+    footer .sectionBody {
+        padding: 2em 2em;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .navList > li {
+        margin: 0;
+    }
+    
+    #people .sectionBody {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .peopleCard {
+        margin-top: 1em;
+    }
+
+    #cards .sectionBody, #articles .sectionBody {
+        flex-direction: column;
+    }
+
+    #middleCard {
+        border: none;
+        border-top: 1px solid #708090;
+        border-bottom: 1px solid #708090;
+        margin: 2em 0;
+        padding: 2em 2em;
+    }
+
+    #articles article {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    #socialMedia {
+        padding: 0;
+    }
+}
