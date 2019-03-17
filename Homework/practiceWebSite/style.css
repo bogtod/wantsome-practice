@@ -1,5 +1,6 @@
 html {
     font-size: 12px;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -10,13 +11,25 @@ html {
     text-decoration: none;
 }
 
+body {
+    background: url('images/banner.jpg') no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Noto Sans', sans-serif;
     font-stretch: extra-expanded;
 }
 
 #cards > *, #articles > *, #socialMedia > * {
-    color: #708090;
+    color: #343b42;
+}
+
+#cards, #articles, footer {
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .section {
@@ -74,9 +87,7 @@ button:hover::after {
 
 /* Header and nav styling */
 header {
-    background: url('images/banner.jpg') no-repeat;
-    background-position: left top;
-    background-size: cover;
+    
     color: white;
     font-weight: lighter;
 }
@@ -157,7 +168,7 @@ li > a:hover .borderSlide {
 
 /* #people section styling */
 #people {
-    background-color: #4169E1;
+    background-color: #4169e1;
     color: white;
 }
 
