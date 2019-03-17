@@ -85,19 +85,22 @@ button:hover::after {
 }
 
 /* go up button styling */
-.goUp {
+#goUp {
+    display: none;
     position: fixed;
     left: 1em;
     top: 90%;
+    transition: all 1s;
 }
 
-.goUp i {
+#goUp i {
     font-size: 2em;
     color: #ff9100;
 }
 
-.goUp:hover i {
+#goUp:hover i {
     color: white;
+    transition: all 1s;
 }
 
 
