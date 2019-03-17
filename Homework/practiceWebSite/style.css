@@ -1,6 +1,5 @@
 html {
     font-size: 12px;
-    scroll-behavior: smooth;
 }
 
 * {
@@ -84,6 +83,24 @@ button:hover::after {
     left: 50%;
     opacity: 1.0;
 }
+
+/* go up button styling */
+.goUp {
+    position: fixed;
+    left: 1em;
+    top: 90%;
+}
+
+.goUp i {
+    font-size: 2em;
+    color: #ff9100;
+}
+
+.goUp:hover i {
+    color: white;
+}
+
+
 
 /* Header and nav styling */
 header {
@@ -275,6 +292,10 @@ footer .sectionBody {
 
     footer .sectionBody {
         padding: 2em 2em;
+    }
+
+    .goUp {
+        left: 0;
     }
 }
 
