@@ -91,7 +91,7 @@ button:hover::after {
     position: fixed;
     left: 1em;
     top: 90%;
-    transition: all 1s;
+    transition: all 0.25s;
 }
 
 #goUp i {
@@ -101,7 +101,7 @@ button:hover::after {
 
 #goUp:hover i {
     color: white;
-    transition: all 1s;
+    transition: all 0.25s;
 }
 
 
@@ -201,6 +201,7 @@ li > a:hover .borderSlide {
     width: 160px;
     padding: 2em;
     margin: 0 5px;
+    transition: all 0.25s;
 }
 
 .peopleCard:hover {
@@ -228,6 +229,7 @@ li > a:hover .borderSlide {
     height: 100px;
     width: 100px;
     border-radius: 50%;
+    transition: all 0.25s;
 }
 
 
