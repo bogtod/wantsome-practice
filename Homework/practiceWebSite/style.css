@@ -86,23 +86,37 @@ button:hover::after {
 }
 
 /* go up button styling */
-#goUp {
+#goUpBtn {
     display: none;
     position: fixed;
     left: 1em;
     top: 90%;
+    z-index: 2;
     transition: all 0.25s;
 }
 
-#goUp i {
+#goUpBtn i {
     font-size: 2em;
     color: #ff9100;
 }
 
-#goUp:hover i {
+#goUpBtn:hover * {
     color: white;
     transition: all 0.25s;
 }
+
+#tooltip {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: -210%;
+    width: 150px;
+    padding: 2px;
+    background-color: #ff9100;
+    color: black;
+    border-radius: 5px;
+}
+
 
 
 
@@ -297,7 +311,7 @@ footer .sectionBody {
         padding: 2em 2em;
     }
 
-    #goUp {
+    #goUpBtn {
         left: 0;
     }
 }
