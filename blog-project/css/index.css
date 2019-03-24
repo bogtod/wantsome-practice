@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 13px;
+}
+
+body {
+  padding: 0 0.5em;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Noto Sans", sans-serif;
+  padding: 0.5em 0;
+  border-bottom: 1px solid #343434;
+}
+
+#brand {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: #343434;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#brand:hover #brandOne, #brand #brandTwo {
+  color: #FF3300;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#brand:hover #brandTwo {
+  color: #343434;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.authButtons button {
+  position: relative;
+  padding: 0.3em 1.2em;
+  margin: 0.2em 0;
+  border: 0.1em solid #343434;
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  border-radius: 2em;
+  color: #FF3300;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.authButtons button:hover {
+  border-color: #FF3300;
+  color: #343434;
+}
+/*# sourceMappingURL=index.css.map */

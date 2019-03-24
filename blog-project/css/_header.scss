@@ -1,0 +1,39 @@
+// styling for header elements
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $primaryFont;
+    padding: 0.5em 0;
+    border-bottom: 1px solid $fontColor;
+}
+
+
+//styling the page brand
+#brand {
+    font-family: $secondaryFont;
+    font-weight: 700;
+    text-decoration: none;
+    color: $fontColor;
+    display: flex;
+    align-items: center;
+}
+
+#brand:hover #brandOne, #brand #brandTwo {
+    color: $accentColor;
+    transition: $mainTransition;
+}
+
+#brand:hover #brandTwo {
+    color: $fontColor;
+    transition: $mainTransition;
+}
+
+
+// styling the authentication buttons
+.authButtons {
+    @include primaryBtn();
+}
+
+
+// styling the search form
