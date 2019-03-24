@@ -4,8 +4,8 @@ header {
     justify-content: space-between;
     align-items: center;
     font-family: $primaryFont;
-    padding: 0.5em 0;
-    border-bottom: 1px solid $fontColor;
+    padding: 0.5em;
+    background-color: aliceblue;
 }
 
 
@@ -37,3 +37,9 @@ header {
 
 
 // styling the search form
+.searchForm {
+    display: flex;
+    padding: 0.3em;
+}
+
+

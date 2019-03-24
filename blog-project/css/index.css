@@ -6,10 +6,6 @@
   font-size: 13px;
 }
 
-body {
-  padding: 0 0.5em;
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,8 +17,8 @@ header {
       -ms-flex-align: center;
           align-items: center;
   font-family: "Noto Sans", sans-serif;
-  padding: 0.5em 0;
-  border-bottom: 1px solid #343434;
+  padding: 0.5em;
+  background-color: aliceblue;
 }
 
 #brand {
@@ -70,5 +66,12 @@ header {
 .authButtons button:hover {
   border-color: #FF3300;
   color: #343434;
+}
+
+.searchForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.3em;
 }
 /*# sourceMappingURL=index.css.map */
