@@ -6,6 +6,14 @@
     font-size: 13px;
 }
 
+// disable outline on focus
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 
 // colors
 $accentColor: #FF3300;
@@ -19,8 +27,9 @@ $secondaryFont: 'PT Sans', sans-serif;
 
 // transition general
 $mainTransition: all 0.2s;
+$slowTransition: all 0.7s;
 
-@mixin primaryBtn {
+@mixin roundBtn {
     button {
         position: relative;
         padding: 0.3em 1.2em;
@@ -39,8 +48,28 @@ $mainTransition: all 0.2s;
                 border-color: $accentColor;
                 color: $fontColor;
             }
-    }
+    } 
+}
 
-    
-    
+
+@mixin rectangularBtn {
+    button {
+        position: relative;
+        padding: 0.3em;
+        border: 0.1em solid #ffffff;
+        background-color: #ffffff;
+        box-sizing: border-box;
+        text-decoration:none;
+        color: $accentColor;
+        text-align: center;
+        cursor: pointer;
+        transition: $mainTransition;
+            
+            &:hover {
+                background-color: $accentColor;
+                color: #ffffff;
+                border: 0.1em solid $accentColor;
+                transition: $mainTransition;
+            }
+    } 
 }

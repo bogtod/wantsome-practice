@@ -6,6 +6,13 @@
   font-size: 13px;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,6 +79,71 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.3em 0;
+  width: 200px;
+  border: 1px solid #ffffff;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.searchForm * {
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.searchForm button {
+  position: absolute;
+  left: 13px;
   padding: 0.3em;
+  border: 0.1em solid transparent;
+  width: 55px;
+  background-color: transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  color: #8e8e8e;
+  text-align: center;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.searchForm i {
+  position: absolute;
+  color: #8e8e8e;
+}
+
+.searchForm #searchInput {
+  padding-left: 0.1em;
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.searchForm:focus-within {
+  border: 0.1em solid #FF3300;
+  border-radius: 5px;
+  margin: 0 0.5em;
+}
+
+.searchForm:focus-within button {
+  background-color: #FF3300;
+  color: #ffffff;
+  border-color: #FF3300;
+  border-radius: 5px;
+  left: calc(200px + 0.3em);
+}
+
+.searchForm:focus-within i {
+  position: absolute;
+  left: calc(-15px - 0.5em);
+  color: #FF3300;
 }
 /*# sourceMappingURL=index.css.map */
