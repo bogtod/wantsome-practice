@@ -46,16 +46,22 @@ function capitalize(theString) {
 }
 
 
-// 6. Scrieti o functie care verifica daca un string este gol sau nu.
-function is_blank(theString) {
-    var result = theString.length;
-    return result === 0;
+// 6. Scrieti o functie care elimina un numar specificat de caractere pornind de la inceputul string-ului:
+function truncate_string(theString, number) {
+    return theString.slice(0, number);
 }
 
 
-// 7. Scrieti o functie accepta ca input un string si il transforma intr-un array de cuvinte:
-function string_to_array(theString) {
-    return theString.split(' ');
+// 7. Scrieti o functie care specifica daca o caracterul de la o anumita pozitie specificata dintr-un string este litera mare sau nu:
+function isUpperCaseAt(theString, letterNum) {
+    // getting the char indicated by the number
+    var theChar = theString.charAt(letterNum);
+
+    // transforming the selected char to Upper Case
+    var upperChar = theChar.toUpperCase();
+
+    // checking if the initial char is the same as the previously turned to upper case char
+    return theChar === upperChar;
 }
 
 
