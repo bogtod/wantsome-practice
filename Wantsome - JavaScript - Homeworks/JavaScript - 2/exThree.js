@@ -193,3 +193,16 @@ var carCountryFuncExpr = function() {
         }
     }
 }
+
+
+
+
+
+
+// function for the refresh btn
+function refreshExThree() {
+    document.getElementById('methodSelector').style = 'display: flex;';
+    document.getElementById('carForm').style = 'display: none;';
+    selectFunc();
+}
+
