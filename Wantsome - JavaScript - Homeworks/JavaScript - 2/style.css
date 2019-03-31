@@ -34,6 +34,9 @@ section span {
     display: block;
 }
 
+#carForm {
+    display: none;
+}
 
 .alert {
     display: block;

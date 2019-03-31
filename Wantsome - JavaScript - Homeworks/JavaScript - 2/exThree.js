@@ -1,5 +1,31 @@
-// setting variable for the output
+
 var carOutput = document.getElementById('carOutput');
+var selectMethod = document.getElementById('selectMethod');
+
+
+selectMethod.onchange = function() {selectFunc()};
+
+var method;
+
+function selectFunc() {
+    switch(true) {
+        case selectMethod.value === 'byFunc':
+            carOutput.innerHTML = 'Se calculează prin invocarea unei funcții care folosește <code>switch</code> pentru a trece prin fiecare caz'
+            break;
+        case selectMethod.value === 'byObj':
+            carOutput.innerHTML = 'Se folosește un Object ce conține numele mărcilor și țările'
+            break;
+        default:
+            carOutput.innerHTML = 'Selectează o opțiune'
+    }
+    method = selectMethod.value;
+}
+selectFunc();
+
+
+
+
+
 
 function carCountry() {
     var car = document.getElementById('car');
