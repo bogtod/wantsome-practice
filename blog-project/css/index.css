@@ -111,7 +111,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.3em 0;
+  padding: 0.3em 0 0.3em 0.3em;
   width: 200px;
   border: 1px solid #ffffff;
   background-color: white;
@@ -123,6 +123,10 @@ header {
 .searchForm * {
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
+}
+
+.searchForm:hover {
+  border: 1px solid #FF3300;
 }
 
 .searchForm button {
