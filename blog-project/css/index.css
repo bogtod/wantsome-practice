@@ -6,11 +6,25 @@
   font-size: 13px;
 }
 
+body {
+  min-height: 100vh;
+  background-color: #f0f8ff;
+}
+
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
   outline: none;
+}
+
+* a {
+  text-decoration: none;
+  color: #343434;
+}
+
+* a:hover {
+  color: #FF3300;
 }
 
 header {
@@ -25,7 +39,7 @@ header {
           align-items: center;
   font-family: "Noto Sans", sans-serif;
   padding: 0.5em;
-  background-color: aliceblue;
+  background-color: #ffffff;
 }
 
 #brand {
@@ -39,6 +53,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 0.3em;
 }
 
 #brand:hover #brandOne, #brand #brandTwo {
@@ -51,6 +66,15 @@ header {
   color: #343434;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+}
+
+.authButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .authButtons button {
@@ -73,6 +97,10 @@ header {
 .authButtons button:hover {
   border-color: #FF3300;
   color: #343434;
+}
+
+.authButtons button {
+  margin: 0 0.3em;
 }
 
 .searchForm {
@@ -145,5 +173,35 @@ header {
   position: absolute;
   left: calc(-15px - 0.5em);
   color: #FF3300;
+}
+
+main {
+  height: 1000px;
+  background-color: white;
+  margin: 2em auto;
+  width: 80%;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em;
+  background-color: #ffffff;
+}
+
+footer * {
+  font-family: "PT Sans", sans-serif;
+  color: #8e8e8e;
+}
+
+footer > div:nth-child(2) > a:first-child {
+  margin: 1em;
 }
 /*# sourceMappingURL=index.css.map */

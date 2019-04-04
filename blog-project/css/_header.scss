@@ -5,7 +5,7 @@ header {
     align-items: center;
     font-family: $primaryFont;
     padding: 0.5em;
-    background-color: aliceblue;
+    background-color: #ffffff;
 }
 
 
@@ -17,6 +17,7 @@ header {
     color: $fontColor;
     display: flex;
     align-items: center;
+    margin-right: 0.3em;
 }
 
 #brand:hover #brandOne, #brand #brandTwo {
@@ -33,6 +34,12 @@ header {
 // styling the authentication buttons
 .authButtons {
     @include roundBtn();
+    display: flex;
+    justify-content: space-between;
+
+    & button {
+        margin: 0 0.3em;
+    }
 }
 
 
@@ -102,5 +109,9 @@ header {
         color: $accentColor;
     }
 }
+
+
+
+
 
 
