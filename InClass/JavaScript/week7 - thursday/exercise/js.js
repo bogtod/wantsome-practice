@@ -188,21 +188,12 @@ function stopArrayAt(arr, stopVal) {
 
 // Ex 13
 // Scrieti o functie care elimina toate valorile false dintr-un array: false, null, 0, "", undefined, NaN
-var testArr = [null, 2, 'Bogdan', undefined, 0];
-var badArr = [false, null, 0, "", undefined, NaN];
+var testArr = [false, null, 0, "", undefined, NaN, 2, 'Bogdan', undefined, 0];
+
 
 function eliminateBadStuff(arr) {
-    var badArr = [false, null, 0, "", undefined, NaN];
-    var text = '';
-    for(var i = 0; i < badArr.length; i++) {
-        for(var x = 0; x < arr.length; i++) {
-            if(badArr[i] !== arr[x]) {
-                text += arr[x];
-            }
-        }
-    }
-
-    return text;
+    
+    return arr.filter(Boolean);
     
 }
 
