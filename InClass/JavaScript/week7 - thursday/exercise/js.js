@@ -2,9 +2,7 @@
 //Scrieti o functie care sa protejeze emailul unui user
 // de ex: myFunction("ovidiu.grigoras@test.com") sa printeze "ovidiu...@test.com" sau "ovid...@test.com"
 function protectEmail(email) {
-
     return `${email.substring(0, 4)}...${email.substring(email.indexOf('@'))}`;
-
 }
 
 
@@ -105,14 +103,7 @@ function biggestNumbers(arrayOfArrays) {
 //Ex7
 // Implementati o functie care face reverse la un string
 function reverseString(theStr) {
-    var revStr = theStr.split('').reverse();
-    var revResult = '';
-
-    for(var i = 0; i < revStr.length; i++) {
-        revResult += revStr[i];
-    }
-
-    return `The word '${theStr}' reversed is '${revResult}'`
+    return `The word '${theStr}' reversed is '${theStr.split('').reverse().join('')}'`
 }
 
 
@@ -160,10 +151,20 @@ function firstPalindrome(arr) {
 }
 
 // OR
-
-function firstPalindromeTwo(arr) {
-    return arr.filter(isPalindrome2)
+function firstPalindromeThree(arr) {
+    for(var i = 0; i < arr.length; i++) {
+        while(isPalindrome2(arr[i])) {
+            return `${arr[i]} is the first palindrome in the array`
+        }
+    }
+    return `No palindromes found`
 }
+
+// OR
+function firstPalindromeTwo(arr) {
+    return arr.filter(isPalindrome2)[0]
+}
+
 
 
 
@@ -171,14 +172,12 @@ function firstPalindromeTwo(arr) {
 // Implementati o functie care accepta ca argumente doua string-uri si verifica daca primul string contine toate literele celui de-al doilea string
 function hasSameLetters(str1, str2) {
     var str2Array = str2.split('');
-
     for(var i = 0; i < str2Array.length; i++) {
         if(str1.search(str2Array[i]) === -1) {
-            return `Not all the letters of ${str2} can be found in ${str1}`
+            return `Not all the letters of '${str2}' can be found in '${str1}'`
         }
     }
-
-    return `All letters of ${str2} can be found in ${str1}`
+    return `All letters of '${str2}' can be found in '${str1}'`
 }
 
 
@@ -203,9 +202,7 @@ var testArr = [false, null, 0, "", undefined, NaN, 2, 'Bogdan', undefined, 0];
 
 
 function eliminateFalseValues(arr) {
-    
     return arr.filter(Boolean);
-    
 }
 
 
@@ -222,6 +219,4 @@ function repeatString(theStr, times) {
 
 // OR
 
-function repeatStringTwo(theStr, times) {
-    return theStr.repeat(times)
-}
+function repeatStringTwo(theStr, times) { return theStr.repeat(times) }
