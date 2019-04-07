@@ -77,6 +77,15 @@ function isPalindrome(theStr) {
     return `The word '${theStr}' is not a palindrome :( `;
 }
 
+// OR
+
+function isPalindromeVTwo(theStr) {
+    if(theStr.split('').reverse().join('') === theStr) {
+        return `Congrats! The word '${theStr}' is a palindrome`;
+    }
+    return `The word '${theStr}' is not a palindrome :( `;
+}
+
 
 
 //Ex6
@@ -137,13 +146,7 @@ function isSecondInFirst(str1, str2) {
 //Ex10
 // Implementati o functie care accepta doua argumente: un array si o functie de adevar. Functia returneaza primul element din array care trece testul specificat
 function isPalindrome2(theStr) {
-    var revStr = theStr.split('').reverse();
-    var revResult = '';
-    for(var i = 0; i < revStr.length; i++) {
-        revResult += revStr[i];
-    }
-
-    if(revResult === theStr) {return true}
+    if(theStr.split('').reverse().join('') === theStr) {return true}
 }
 
 
