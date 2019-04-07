@@ -2,11 +2,9 @@
 //Scrieti o functie care sa protejeze emailul unui user
 // de ex: myFunction("ovidiu.grigoras@test.com") sa printeze "ovidiu...@test.com" sau "ovid...@test.com"
 function protectEmail(email) {
-    var position = email.indexOf('@');
-    var subOne = email.substring(0, 4);
-    var subTwo = email.substring(position);
 
-    return `${subOne}...${subTwo}`;
+    return `${email.substring(0, 4)}...${email.substring(email.indexOf('@'))}`;
+
 }
 
 
@@ -16,15 +14,15 @@ function protectEmail(email) {
 // de ex: myFunction("i am superman") sa printeze "I Am Superman"
 function firstToUpperCase(theStr) {
     var strArray = theStr.split(' ');
-
     var text = '';
+
     for(var i = 0; i < strArray.length; i++) {
-        // text += `${strArray[i].charAt(0).toUpperCase()}${strArray[i].slice(1)} `
-        text += strArray[i].charAt(0).toUpperCase() + strArray[i].slice(1);
+        text += `${strArray[i].charAt(0).toUpperCase()}${strArray[i].slice(1)} `
     }
 
     return text;
 }
+
 
 
 //Ex3
@@ -73,25 +71,21 @@ function isPalindrome(theStr) {
     }
 
     if(revResult === theStr) {
-        return `Congrats! The word "${theStr}" is a palindrome`;
-    } else {
-        return `${theStr} is not a palindrome`;
+        return `Congrats! The word '${theStr}' is a palindrome`;
     }
-
+    
+    return `The word '${theStr}' is not a palindrome :( `;
 }
+
+
 
 //Ex6
 // Implementati o functie care accepta ca argument un array compus din mai multe array-uri de valori numerice si returneaza un array care contine ca si elemente cele mai mari numere din fiecare array
 function biggestNumbers(arrayOfArrays) {
     var bigNumArray = [];
 
-    function sortNumbers(a, b) {
-        return b-a;
-    }
-
     for(var i = 0; i < arrayOfArrays.length; i++){
-        arrayOfArrays[i] = arrayOfArrays[i].sort(sortNumbers);
-        bigNumArray.push(arrayOfArrays[i][0]);
+        bigNumArray.push(arrayOfArrays[i].sort(function (a, b) {return b-a;})[0]);
     }
 
     return bigNumArray;
@@ -109,8 +103,10 @@ function reverseString(theStr) {
         revResult += revStr[i];
     }
 
-    return `The word ${theStr} reversed is ${revResult}`
+    return `The word '${theStr}' reversed is '${revResult}'`
 }
+
+
 
 //Ex8 
 // Implementati o functie care calculeaza factorialul unui numar
@@ -124,15 +120,18 @@ function factorialOfNumber(number) {
 }
 
 
+
 //Ex9
 // Implementati o functie care accepta ca argumente doua string-uri si verifica daca primul se termina cu cel din urma
 function isSecondInFirst(str1, str2) {
     if(str1.slice(-str2.length) === str2) {
         return `The string ${str1} is ending in ${str2}`
-    } else {
-        return `The string ${str1} is not ending in ${str2}`
     }
+
+    return `The string ${str1} is not ending in ${str2}`
+    
 }
+
 
 
 //Ex10
@@ -144,18 +143,25 @@ function isPalindrome2(theStr) {
         revResult += revStr[i];
     }
 
-    if(revResult === theStr) {return true} else {return false}
+    if(revResult === theStr) {return true}
 }
 
 
 function firstPalindrome(arr) {
     for(var i = 0; i < arr.length; i++) {
-        
         if(isPalindrome2(arr[i]) === true) {
             return `${arr[i]} is the first palindrome in the array`
         }
     }
+    return `No palindromes found`
 }
+
+// OR
+
+function firstPalindromeTwo(arr) {
+    return arr.filter(isPalindrome2)
+}
+
 
 
 //Ex11
@@ -173,12 +179,13 @@ function hasSameLetters(str1, str2) {
 }
 
 
+
 // Ex 12
 // Implementati o functie care accepta ca argumente doi parametri: un array si o valoare. Functia afiseaza fiecare element al array-ului pana cand intalneste elementul cu valoarea specificata
 function stopArrayAt(arr, stopVal) {
     for(var i = 0; i < arr.length; i++) {
         if(arr[i] === stopVal) {
-            console.log(`I'm stopping now...`)
+            console.log(`I found the element ${arr[i]} so I'm stopping now...`)
             break;
         }
         console.log(arr[i])
@@ -186,25 +193,32 @@ function stopArrayAt(arr, stopVal) {
 }
 
 
+
 // Ex 13
 // Scrieti o functie care elimina toate valorile false dintr-un array: false, null, 0, "", undefined, NaN
 var testArr = [false, null, 0, "", undefined, NaN, 2, 'Bogdan', undefined, 0];
 
 
-function eliminateBadStuff(arr) {
+function eliminateFalseValues(arr) {
     
     return arr.filter(Boolean);
     
 }
 
+
+
 // Ex 14
 // Scrieti o functie care repeta un string de n ori specificate
 function repeatString(theStr, times) {
     var result = '';
-    var i = 0;
-    while(i < times) {
-        result += theStr;
-        i++
+    for(var i = 0; i < times; i++) {
+        result += theStr
     }
     return result;
+}
+
+// OR
+
+function repeatStringTwo(theStr, times) {
+    return theStr.repeat(times)
 }
