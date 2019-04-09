@@ -48,17 +48,10 @@ function removeDuplicates(value) {
     } 
     valueArray = value.split('');
     
-    for(var i = 0; i < valueArray.length; i++){
-        for(var x = 0; x < valueArray.length; x++) {
-            if(valueArray[i] === valueArray[x]) {
-                valueArray.splice(i, 1); 
-                i--;
-            }
-        } 
-        
-    }
-
-    return valueArray;
+    return valueArray.filter(function(element, position) {
+        return valueArray.indexOf(element) == position;
+    }).join('')
+    
 }
 
 
@@ -205,20 +198,57 @@ function dayAndHour() {
 // validPin("1234") => true
 // validPin("12345") => false
 // validPin("z23f") => false
+function validPin(pin) {
+    var pinArr = pin.split('')
+    if(pinArr.length === 4 || pinArr.length === 6) {
+        for(var i = 0; i < pinArr.length; i++) {
+            if(isNaN(Number(pinArr[i]))) {
+                return false;
+            }
+        }
+        return true
+    }
+    return false
+}
 
 
 //ex11 
 //Folosind regex vreau sa scot toate vocalele dintr-un string
 // removeVowels("Hey I am developer") => "Hy m dvlpr"
+function removeVowels(theStr) {
+    return theStr.replace(/[aeiou]/ig,'')
+}
+
 
 //ex12
 //Vreau sa am o functie care sa verifice daca un numar este patrat
 // isSquareNumber(-1) => false
 // isSquareNumber(25) => true
 // isSquareNumber(3) => false
+function isSquareNumber(number) {
+    for(var i = 1; i < number + 1; i++) {
+        if(i * i === number) {
+            return true
+        }
+    }
+    return false
+}
 
 
 //ex13
 // Vreau sa am o functie care sa verifice daca un cuvant este o anagrama- daca toate literele din primul string se regasesc in al doilea
 // isAnagram("School master", "The class room") => true
 // isAnagram("silent", "listen") => true
+function isAnagram(str1, str2) {
+    var str2Array = str2.split('');
+    for(var i = 0; i < str2Array.length; i++) {
+        if(str1.search(str2Array[i]) === -1) {
+            return false
+        }
+    }
+    return true
+}
+
+
+
+
