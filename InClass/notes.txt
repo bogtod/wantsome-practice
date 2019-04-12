@@ -1,1 +1,3 @@
 Look for dynamical scope - what does it mean? "this" is an example
+
+//https://asmarterwaytolearn.com/js/index-of-exercises.html
