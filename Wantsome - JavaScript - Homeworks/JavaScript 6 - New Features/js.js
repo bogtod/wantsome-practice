@@ -85,10 +85,74 @@ function spinWords(theStr) {
 
 
 //////////// RESCRIERE EXERCITII DE LA TEMELE ANTERIOARE CU ES6 ////////////////////
+////Ex1:
+//ES5
+function isPalindromeVTwo(theStr) {
+    if(theStr.split('').reverse().join('') === theStr) {
+        return `Congrats! The word '${theStr}' is a palindrome`;
+    }
+    return `The word '${theStr}' is not a palindrome :( `;
+}
+
+//ES6
+const isPalindromeVTwoES6 = theStr => (theStr.split('').reverse().join('') === theStr)? `Congrats! The word '${theStr}' is a palindrome` : `The word '${theStr}' is not a palindrome :( `
 
 
+////Ex2:
+//ES5
+function reverseString(theStr) {
+    return `The word '${theStr}' reversed is '${theStr.split('').reverse().join('')}'`
+}
+
+//ES6
+const reverseStringES6 = theStr => `The word '${theStr}' reversed is '${theStr.split('').reverse().join('')}'`
 
 
+////Ex3:
+//ES5
+function biggestNumbers(arrayOfArrays) {
+    var bigNumArray = [];
+    for(var i = 0; i < arrayOfArrays.length; i++){
+        bigNumArray.push(arrayOfArrays[i].sort(function (a, b) {return b-a;})[0]);
+    }
+    return bigNumArray;
+}
 
+//ES6
+const biggestNumbersES6 = arrayOfArrays => {
+    let bigNumArray = [];
+    for(let array of arrayOfArrays) {
+        bigNumArray.push(array.sort(function (a, b) {return b-a;})[0]);
+    }
+    return bigNumArray
+}
+
+
+////Ex4:
+//ES5
+function isPalindrome2(theStr) {
+    if(theStr.split('').reverse().join('') === theStr) {return true}
+}
+
+function firstPalindrome(arr) {
+    for(var i = 0; i < arr.length; i++) {
+        if(isPalindrome2(arr[i]) === true) {
+            return `${arr[i]} is the first palindrome in the array`
+        }
+    }
+    return `No palindromes found`
+}
+
+//ES6
+const isPalindrome2ES6 = theStr => (theStr.split('').reverse().join('') === theStr)? true : false
+const firstPalindromeES6 = arr => arr.filter(isPalindrome2)[0]
+
+
+////Ex5:
+//ES5
+function repeatStringTwo(theStr, times) { return theStr.repeat(times) }
+
+//ES6
+const repeatStringTwoES6 = (theStr, times) => theStr.repeat(times)
 
 
