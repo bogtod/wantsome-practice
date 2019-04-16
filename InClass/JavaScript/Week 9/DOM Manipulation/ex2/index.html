@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Traversing the DOM</title>
+</head>
+<style>
+#bogdan {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 5em;
+    border: solid 1px black;
+    background-color: white;
+}
+
+</style>
+<body>
+  <h1>Traversing the DOM</h1>
+  <p>Let's work with this example to <strong>MASTER</strong> the DOM!</p>
+  <h2>List of Items..</h2>
+  <ul>
+    <li>Pizza</li>
+    <li>Burgers</li>
+    <li>Doritos</li>
+  </ul>
+  <div id="bogdan"><strong>Te-ai spăriet???</strong></div>
+</body>
+<script>
+  const h1 = document.getElementsByTagName('h1')[0];
+  const p = document.getElementsByTagName('p')[0];
+  
+  
+  const ul = document.querySelector('ul');
+  ul.children[1].previousElementSibling.style.backgroundColor = 'red'
+  ul.children[1].nextElementSibling.style.backgroundColor = 'green'
+  
+  ul.onclick = function() {
+      document.getElementById('bogdan').style.visibility = 'visible'
+      document.body.style.backgroundColor = 'yellow'
+    }
+
+</script>
+</html>
