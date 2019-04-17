@@ -1,0 +1,66 @@
+body {
+    height: 100vh;
+    background-color: rgb(103, 204, 250)
+}
+
+section {
+    width: 40%;
+    margin: 1em auto;
+}
+
+form {
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+}
+
+#commentWrap {
+    display: none;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+#commentWrap > * {
+    margin: 0.5em 0;
+}
+
+#successMsg {
+    display: none;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+#alert {
+    display: none;
+    background-color: rgb(220, 20, 60);
+    color: white;
+}
+
+
+
+#commOutputWrap {
+    display: none;
+}
+
+#commentOutput {
+    background-color: white;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+
+#btn {
+    background-color: green;
+    color: white;
+    border: 1px solid green;
+    border-radius: 2px;
+}
+
+#btn:disabled {
+    background-color: darkgrey;
+    color: grey;
+}
+
