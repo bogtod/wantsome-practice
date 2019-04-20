@@ -9,46 +9,55 @@
 </head>
 <body>
     <section>
+        <div id="methodSelector">
+            <p><strong>The validation of this form can be done in two ways. </strong>
+                The default method is validating the fields when you click the submit button
+                <br><br>
+                If you want the validator to run for each field, please check this box
+                <input type="checkbox" name="validationMethod" id="perInputMethod">
+            </p>
+            
+        </div>
         <h3>Get your own Site 42 Sites account in seconds</h3>
         <form>
             <div class="form-group">
-                <label for="username">Username</label>
+                <label for="username">USERNAME</label>
                 <input type="text" id="username" name="username" />
                 <small>(Must be at least 4 chars, letters and numbers only</small>
             </div>
     
             <div class="form-group">
-                <label for="email">Email Address</label>
+                <label for="email">EMAIL ADDRESS</label>
                 <input type="text" id="email" name="email" />
                 <small>We send your registration to this email address</small>
             </div>
     
             <div class="form-group">
-                <label for="firstName">First Name</label>
+                <label for="firstName">FIRST NAME</label>
                 <input type="text" id="firstName" name="firstName" />
                 <small>(must be input)</small>
             </div>
     
             <div class="form-group">
-                <label for="lastName">Last Name</label>
+                <label for="lastName">LAST NAME</label>
                 <input type="text" id="lastName" name="lastName" />
                 <small>(Must be input)</small>
             </div>
     
             <div class="form-group">
-                <label for="nickname">Nickname</label>
+                <label for="nickname">NICKNAME</label>
                 <input type="text" id="nickname" name="nickname" />
                 <small></small>
             </div>
     
             <div class="form-group">
-                <label for="phone">Phone Number</label>
+                <label for="phone">PHONE NUMBER</label>
                 <input type="text" id="phone" name="phone" />
                 <small>Must be at least 10 characters. Numbers Only!!!</small>
             </div>
         </form>
         
-        <button id="submitBtn">Next</button>
+        <button id="submitBtn">Submit</button>
     </section>
 </body>
 <script src="js.js"></script>
