@@ -63,7 +63,8 @@ function checkUsername() {
 
 
 function checkEmail() {
-    if(email.value.search('@') !== -1) {
+    let emailRegEx = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(email.value.match(emailRegEx)) {
         alert('off', email);
         return true;
     } else {
@@ -99,11 +100,12 @@ function checkLastName() {
 
 
 function checkPhone() {
-    if(phone.value.length > 0) {
+    var phoneRegEx = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if(phone.value.match(phoneRegEx)) {
         alert('off', phone);
-        return true;
+      return true;
     } else {
-        alert('on', phone, 'Please insert a last name');
+        alert('on', phone, 'Please insert a valid phone number');
         toggleBtn('off');
         phone.onkeyup = checkPhone;
     }
@@ -112,14 +114,23 @@ function checkPhone() {
 
 //function for checking if all the fields are good - used by the submit btn
 function checkAll() {
-    let funcs = [checkUsername(), checkEmail(), checkFirstName(), checkLastName(),checkPhone()]
-    for(let i = 0; i < funcs.length; i++) {
-        if(funcs[i] !== true) {
-            toggleBtn('off');
-            return;
+    let loader = document.getElementById('loadingWrap');
+    loader.style.display = 'block';
+    setInterval(function() {
+        let funcs = [checkUsername(), checkEmail(), checkFirstName(), checkLastName(),checkPhone()]
+        for(let i = 0; i < funcs.length; i++) {
+            if(funcs[i] !== true) {
+                toggleBtn('off');
+                loader.style.display = 'none';
+                return;
+            }
+            toggleBtn('on');
         }
-        toggleBtn('on');
-    }
+        document.getElementById('successMsg').innerHTML = `Thank you, ${firstName.value}! <br>The form has been successfully submitted!`
+        document.getElementById('successMsg').style.display = 'block';
+        document.querySelector('section').style.display = 'none';
+        loader.style.display = 'none';
+    }, 3000)
 }
 
 submitBtn.addEventListener('click', checkAll);
