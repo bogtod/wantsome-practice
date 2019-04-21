@@ -14,7 +14,7 @@ const commentOutput = document.getElementById('commentOutput');
 checkbox.onchange = function() {
     if(checkbox.checked === true) {
         commentWrap.style.display = 'flex';
-        
+        commArea.focus();
     } else {
         commentWrap.style.display = 'none';
         btn.disabled = true;
@@ -37,14 +37,16 @@ commArea.onfocus = function() {
                 charCount.textContent = `You entered ${count} characters. ${160-count} to go. You should thing about stopping now...`;
                 charCount.style.backgroundColor = 'yellow';
                 if(commArea.value.split('').length > 160) {
+                    commArea.style.backgroundColor = 'red';
                     charCount.textContent = `You entered ${count} characters!!!`;
                     charCount.style.color = 'red';
-                    alert.style.display = 'block'
-                    btn.disabled = true
+                    alert.style.display = 'block';
+                    btn.disabled = true;
                 } else {
+                    commArea.style.backgroundColor = 'white';
                     charCount.style.color = 'black';
-                    alert.style.display = 'none'
-                    btn.disabled = false
+                    alert.style.display = 'none';
+                    btn.disabled = false;
                 }
             } else {
                 charCount.style.backgroundColor = 'white';
