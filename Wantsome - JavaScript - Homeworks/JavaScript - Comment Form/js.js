@@ -6,8 +6,6 @@ const charCount = document.getElementById('charCount');
 const congratsMsg = document.getElementById('successMsg');
 const alert = document.getElementById('alert');
 const btn = document.getElementById('btn');
-const commentOutputWrap = document.getElementById('commentOutputWrap');
-const commentOutput = document.getElementById('commentOutput');
 
 
 
@@ -42,10 +40,10 @@ commArea.onfocus = function() {
         } else if(count > 1) {
             //IFs and actions for different char counts
             charCount.textContent = `You entered ${count} characters. ${160-count} to go`;
-            if(count >= 150) {
+            if(count > 150) {
                 charCount.textContent = `You entered ${count} characters. ${160-count} to go. You should think about stopping now...`;
                 charCount.style.backgroundColor = 'yellow';
-                if(commArea.value.split('').length > 160) {
+                if(count > 160) {
                     //if char count is above 160, do the following
                     commArea.style.backgroundColor = 'red';
                     charCount.textContent = `You entered ${count} characters!!!`;
@@ -60,6 +58,10 @@ commArea.onfocus = function() {
                 }
             } else {
                 charCount.style.backgroundColor = 'white';
+                commArea.style.backgroundColor = 'white';
+                    charCount.style.color = 'black';
+                    alert.style.display = 'none';
+                    btn.disabled = false;
             }
         }
     }
@@ -70,14 +72,21 @@ commArea.onfocus = function() {
 function sendFeedback() {
     document.querySelector('form').style.display = 'none';
     congratsMsg.style.display = 'block';
-    commentOutputWrap.style.display = 'block';
     var now  = new Date();
 
     //output the user's feedback along with the date and time
-    commentOutput.innerHTML = `
+    let output = document.createElement('section');
+    congratsMsg.insertAdjacentElement('afterend', output);
+    output.style.width = '100%';
+    output.innerHTML = `
+        <h4>Your feedback:</h4>
+        <hr>
+        <div id='commentOutput'>
         <p><i>${commArea.value}</i></p>
         <hr>
         <small>Sent on <span>${now.toLocaleString("ro-RO")}</span></small>
+        </div>
+        
     `;
 }
 

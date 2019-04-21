@@ -67,11 +67,6 @@ textarea {
     color: grey;
 }
 
-
-#commentOutputWrap {
-    display: none;
-}
-
 #commentOutput {
     background-color: white;
     border-radius: 5px;
