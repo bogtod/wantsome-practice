@@ -110,7 +110,7 @@ function checkPhone() {
 }
 
 
-
+//function for checking if all the fields are good - used by the submit btn
 function checkAll() {
     let funcs = [checkUsername(), checkEmail(), checkFirstName(), checkLastName(),checkPhone()]
     for(let i = 0; i < funcs.length; i++) {
