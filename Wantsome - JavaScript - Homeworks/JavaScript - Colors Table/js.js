@@ -52,10 +52,10 @@ function getColors() {
 
             //showing and hiding a color's hex name on mouse over
             wrapDiv.onmouseover = function() {
-                wrapDiv.children[0].style.display = 'inline-block';
+                this.children[0].style.display = 'inline-block';
             }
             wrapDiv.onmouseout = function() {
-                wrapDiv.children[0].style.display = 'none';
+                this.children[0].style.display = 'none';
             }
         }
     }

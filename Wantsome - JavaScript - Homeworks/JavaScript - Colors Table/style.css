@@ -18,7 +18,7 @@ section {
 section > div {
     position: relative;
     margin: 1em;
-    cursor: copy;
+    cursor: crosshair;
 }
 
 .colorize {
