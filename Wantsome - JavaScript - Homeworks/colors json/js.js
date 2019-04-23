@@ -19,18 +19,20 @@ ajaxRequest();
 function showColors(jsonObj) {
     const myList = document.createElement('ul');
     const colorsKeys = Object.keys(jsonObj);
-    console.log()
+    const colorVals = Object.values(jsonObj);
 
     for(let i = 0; i < colorsKeys.length; i++) {
         const listItem = document.createElement('li');
-        const spanColor = document.createElement('span');
-        const spanText = document.createElement('span');
-        spanText.textContent = jsonObj[Object.keys[i]];
-        
+        const colorDiv = document.createElement('div');
+        const textSpan = document.createElement('span');
 
-        listItem.innerHTML = `${colorsKeys[i]}`
+        colorDiv.classList.add('colorize');
+        textSpan.textContent = colorsKeys[i];
+        colorDiv.style.backgroundColor = colorVals[i];
 
-        listItem.appendChild(spanText)
+
+        listItem.appendChild(colorDiv);
+        listItem.appendChild(textSpan);
         myList.appendChild(listItem);
         section.appendChild(myList);
     }
