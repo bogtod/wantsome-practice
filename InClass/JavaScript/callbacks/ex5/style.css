@@ -4,8 +4,24 @@ html * {
     box-sizing: border-box;
 }
 
+
+
+ul {
+    list-style: none;
+}
+
+#loading {
+    display: none;
+    width: 100%;
+}
+#loading > * {
+    display: block;
+    width: 30%;
+    margin: 3em auto;
+}
+
 #app {
-    width: 80%;
+    width: 800px;
     margin: 1em auto;
 }
 
@@ -36,7 +52,10 @@ html * {
 #booksDetails > * {
     display: flex;
     margin: 1em 0;
-    border: 1px solid black;
+    padding: 0.2em;
+    border: solid 1px black;
+    background-color: #aad3ff;
+    box-shadow: 3px 3px 5px -2px rgba(0,0,0,0.75);
 }
 
 #booksDetails > div > img {

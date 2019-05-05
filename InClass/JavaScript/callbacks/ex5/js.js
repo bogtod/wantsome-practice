@@ -1,17 +1,20 @@
+window.onload = function() {document.querySelector('.custom-input > input').focus()}
 const form = document.querySelector("form");
+const loading = document.querySelector("#loading");
 form.onsubmit = function(event) {
   event.preventDefault();
-
+  document.getElementById('fourBooksWrap').innerHTML = '';
+  document.getElementById('booksDetails').innerHTML = '';
+  loading.style.display = 'block';
   // luati numele cartii din input
   const name = document.querySelector('.custom-input > input');
 
   if(name.value.length === 0) {
+    loading.style.display = 'none';
     let error = document.createElement('span');
     error.classList.add('error');
     error.innerText = "The search input shouldn't be empty!";
     form.insertAdjacentElement('afterend', error);
-    document.getElementById('fourBooksWrap').innerHTML = '';
-    document.getElementById('booksDetails').innerHTML = '';
     name.focus();
   } else {
     //remove the error alert if the search is performed after an empty attempt
@@ -19,13 +22,14 @@ form.onsubmit = function(event) {
       document.querySelector('.error').remove();
     }
 
-    const urlQuery = `https://www.googleapis.com/books/v1/volumes?q=${name.value}`
+    const urlQuery = `https://www.googleapis.com/books/v1/volumes?q=${name.value}`;
     //apelati API-ul si folositi functia resultOfBooks ca si handler pentru raspunsul primit
     const request = new XMLHttpRequest();
     request.open('GET', urlQuery);
     request.responseType = 'json';
     request.send();
     request.onload = function() {
+      loading.style.display = 'none';
       resultsOfBooks(request.response);
     }
   }
@@ -55,7 +59,7 @@ function displayBookParagraph(books) {
   let fourBooksWrap = document.getElementById('fourBooksWrap');
   fourBooksWrap.innerHTML = '';
   let fourBooksParagraph = document.createElement('p');
-  fourBooksParagraph.innerText = 'The first four books are:';
+  fourBooksParagraph.innerHTML = '<strong>The first four books are:</strong>';
   let listOfBooks = document.createElement('ul');
   for(let i = 0; i < books.length; i++) {
     let listItem = document.createElement('li');
@@ -65,7 +69,7 @@ function displayBookParagraph(books) {
   
   fourBooksWrap.appendChild(fourBooksParagraph);
   fourBooksWrap.appendChild(listOfBooks);
-  addBooksToPage(books)
+  addBooksToPage(books);
 }
 
 function addBooksToPage(books) {
@@ -93,19 +97,22 @@ function addBooksToPage(books) {
       <p>Language: ${books[i].language}</p>
       <a href='${books[i].previewLink}'>See it on Google Books</a>
     `
-    
-    if(books[i].description.split(' ').length > 15) {
-      shorten = [];
-      for(let x = 0; x < 15; x++) {
-        shorten.push(books[i].description.split(' ')[x]);
+    let booksDescription = books[i].description;
+    if(booksDescription === undefined) {
+      bookDescription.innerHTML = "<small><i>No description available for this book</i></small>";
+    } else {
+      if(booksDescription.split(' ').length > 15) {
+        shorten = [];
+        for(let x = 0; x < 15; x++) {
+          shorten.push(booksDescription.split(' ')[x]);
+        }
+        bookDescription.innerHTML = `<strong>Short description:</strong><br>${shorten.join(' ')}[...]`;
       }
-      bookDescription.innerHTML = `<strong>Short description:</strong><br>${shorten.join(' ')}[...]`;
     }
+    
     book.appendChild(bookImg);
     bookInfo.appendChild(bookDescription)
     book.appendChild(bookInfo);
-    
-    // book.appendChild(bookDescription);
     booksDetails.appendChild(book);
   }
 }
