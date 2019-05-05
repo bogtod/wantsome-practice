@@ -1,0 +1,48 @@
+html * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    width: 80%;
+    margin: 1em auto;
+}
+
+#app > form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+#app > form > input {
+    margin: 0 0.5em;
+}
+
+.error {
+    display: block;
+    background-color: rgb(253, 66, 66);
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+#booksDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+#booksDetails > * {
+    display: flex;
+    margin: 1em 0;
+    border: 1px solid black;
+}
+
+#booksDetails > div > img {
+    margin-right: 1em;
+}
+
+#booksDetails > div > div > *:last-child {
+    margin-top: 1em;
+}
