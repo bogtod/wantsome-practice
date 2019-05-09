@@ -1,26 +1,26 @@
-
-const Forma = function() {};
-
 function Triangle(a, b, c) {
-    this.name = 'triunghi';
-    this.l1 = a;
-    this.l2 = b;
-    this.l3 = c;
-    this.getPerimeter = function() {
-        return a+b+c;
-    }
-    this.getType = function() {
-        return this.name;
-    }
+    this.a = a;
+    this.b = b;
+    this.c = c;
+    this.type = 'trunghi';
 }
 
-// Triangle.prototype = new Forma();
+const forma = {
+    type: '',
+    getType: function() {
+        return this.type;
+    }
+};
 
 
+
+Triangle.prototype = forma;
+Triangle.prototype.constructor = Triangle;
 let triunghi = new Triangle(2, 4, 6);
+Triangle.prototype.getPerimeter = function() {return this.a + this.b + this.c};
 
 triunghi.constructor;                          // Triangle(a, b, c)    
-Forma.prototype.isPrototypeOf(triunghi);       // true
+forma.isPrototypeOf(triunghi);       // true
 triunghi.getPerimeter();                       // 12
 triunghi.getType();                            // "triunghi"
 
