@@ -12,8 +12,7 @@ class Account {
 };
 
 class Transaction {
-    constructor(iba, sender, bank, amount, reference) {
-        this.iba = iba;
+    constructor(sender, bank, amount, reference) {
         this.sender = sender;
         this.bank = bank;
         this.amount = amount;
@@ -32,9 +31,9 @@ class Table {
 };
 
 let bankAccount = new Account('iasi', 'Bogdan');
-let transaction1 = new Transaction('iba', 'Trump', 'ING', 3500, '09988766');
-let transaction2 = new Transaction('iba', 'Dragnea', 'BT', 12000, '09912766');
-let transaction3 = new Transaction('iba', 'Mama', 'Raiffeisen', 500, '45688766');
+let transaction1 = new Transaction('Trump', 'ING', 3500, '09988766');
+let transaction2 = new Transaction('Dragnea', 'BT', 12000, '09912766');
+let transaction3 = new Transaction('Mama', 'Raiffeisen', 500, '45688766');
 
 let table = new Table();
 table.addTransaction(transaction1, transaction2, transaction3);
