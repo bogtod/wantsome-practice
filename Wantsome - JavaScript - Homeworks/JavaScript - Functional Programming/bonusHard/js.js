@@ -69,7 +69,7 @@ function getData(arr) {
             obj.id = movie.id;
             obj.title = movie.title;
             obj.boxart = movie.boxarts.filter((box) => { return box.width === 150 })
-            newArr.push(obj)
+            newArr.push(obj);
         });
     });
     console.log(newArr);
