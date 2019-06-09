@@ -1,0 +1,25 @@
+[
+    {
+        "type" : "hotel",
+        "name" : "Motif Seattle",
+        "city" : "Seattle",
+        "highRate" : 289,
+        "hotelRating" : 4
+    }, {
+        "type" : "hotel",
+        "name" : "The Westin Seattle",
+        "city" : "Seattle",
+        "highRate" : 259,
+        "hotelRating" : 4
+    }, {
+        "type" : "hotel",
+        "name" : "Sheraton Seattle Hotel",
+        "city" : "Seattle",
+        "highRate" : 320
+    }, {
+        "type" : "hotel",
+        "name" : "The Edgewater - A Noble House Hotel",
+        "city" : "Burlingame",
+        "highRate" : 269
+    }
+]
