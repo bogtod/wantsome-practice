@@ -1,17 +1,10 @@
 import React from 'react'
-import Input from './input'
 
 class Numbers extends React.Component {
     
-    updateInput(e) {
-        console.log(e.target.name);
-        
-    }
-    
-    
-      render() {
+    render() {
         return (
-          <button onClick={this.updateInput} name={this.props.num}>{this.props.num}</button>
+          <button onClick={e => this.props.onClick(e.target.name, 'num')} name={this.props.num}>{this.props.num}</button>
         );
     }
 
