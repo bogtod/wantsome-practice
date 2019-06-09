@@ -2,7 +2,29 @@ import React, { Component } from 'react';
 import Item from './item.js'
 
 class Main extends Component{
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            data: null
+        }
+    }
+
+    componentDidMount() {
+        fetch('https://raw.githubusercontent.com/bogtod/wantsome-practice/master/data.json')
+        // .then(resp => resp.json())
+        .then(resp => resp.json())
+        .then(resp => this.stateSetting(resp))
+    }
+
+    stateSetting(response) {
+        // this.setState({data: response});
+        console.log(response)
+    }
+
     
+
     render() {
         return (
             <div>
