@@ -1,6 +1,6 @@
 import React from 'react'
-import ItemImage from './itemImage'
-import ItemDetails from './itemDetails'
+import ItemImage from './itemImg/itemImage'
+import ItemDetails from './itemDetails/itemDetails'
 
 class Item extends React.Component{
     render() {

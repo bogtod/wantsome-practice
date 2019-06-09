@@ -4,7 +4,10 @@ import RoomVotes from './roomVotes'
 class RoomRating extends React.Component{
     render() {
         return (
-            <div>star-star-star <RoomVotes roomVotes={this.props.roomVotes} /></div>
+            <div>
+                <img src={this.props.rating} alt="tripadvisor-rating" />
+                <RoomVotes roomVotes={this.props.roomVotes} />
+            </div>
         )
     }
 };

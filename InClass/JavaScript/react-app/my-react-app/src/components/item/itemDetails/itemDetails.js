@@ -11,7 +11,7 @@ class ItemDetails extends React.Component {
                 <p><RoomType roomType={this.props.details.roomType} /> - <RoomLocation roomLocation={this.props.details.roomLocation} /></p>
                 <RoomName roomName={this.props.details.roomName} />
                 <div>
-                    <RoomRating roomVotes={this.props.details.roomVotes}/>
+                    <RoomRating roomVotes={this.props.details.roomVotes} rating={this.props.details.rating} />
                 </div>
             </div>
         )
